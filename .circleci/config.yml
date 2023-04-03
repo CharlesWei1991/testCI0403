@@ -58,13 +58,4 @@ workflows:
           branches:
             only:
               - develop
-      - Fetch-Code:
-        - Hello-World
-      - Using-Node:
-          requires:
-            - Fetch-Code
-      - Now-Complete:
-          requires:
-            - Using-None
-            - Fetch-Code
             
