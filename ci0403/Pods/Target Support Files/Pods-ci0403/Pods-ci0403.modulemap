@@ -1,0 +1,6 @@
+framework module Pods_ci0403 {
+  umbrella header "Pods-ci0403-umbrella.h"
+
+  export *
+  module * { export * }
+}
