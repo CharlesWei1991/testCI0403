@@ -53,19 +53,18 @@ jobs:
 workflows:
   Example-Workflow:
     jobs:
-      - Hello-World
+      - Hello-World:
+        filters:
+          branches:
+            only:
+              - develop
       - Fetch-Code:
-          requires:
-            - Hello-World
+        - Hello-World
       - Using-Node:
           requires:
             - Fetch-Code
-      - Hold-for-Approval:
-          type: approval
-          requires:
-            - Using-Node
-            - Fetch-Code
       - Now-Complete:
           requires:
-            - Hold-for-Approval
+            - Using-None
+            - Fetch-Code
             
