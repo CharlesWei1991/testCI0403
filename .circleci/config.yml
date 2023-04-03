@@ -56,8 +56,8 @@ workflows:
       - Hello-World:
         filters:
           branches:
-            only:
-              - main
+            ignore:
+              - develop
       # - Fetch-Code:
       #   - Hello-World
       # - Using-Node:
