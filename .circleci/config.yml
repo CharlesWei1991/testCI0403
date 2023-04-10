@@ -8,11 +8,10 @@ jobs:
           username: Charles_Wei_1991@126.com
           password: $Heri9Zailai
     steps:
+      - checkout
       - run:
           name: Saying Hello
-          command: |
-            echo 'Hello World!'
-            echo 'This is the delivery pipeline'
+          command: bundle exec fastlane CI0403
   # fetching code from the repo
   Fetch-Code:
     docker:
