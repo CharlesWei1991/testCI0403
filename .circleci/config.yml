@@ -9,7 +9,7 @@ jobs:
           password: $Heri9Zailai
     steps:
       - checkout
-      - run: npm install
+      - run: bundle check || bundle install --path vendor/bundle
   # fetching code from the repo
   Fetch-Code:
     docker:
