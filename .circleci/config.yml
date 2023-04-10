@@ -10,7 +10,9 @@ jobs:
     steps:
       - run:
           name: Saying Hello
-          command: bundle exec fastlane CI0403
+          command: |
+            echo 'Hello World!'
+            echo 'This is the delivery pipeline'
   # fetching code from the repo
   Fetch-Code:
     docker:
@@ -51,15 +53,16 @@ jobs:
 workflows:
   Example-Workflow:
     jobs:
-      - Fetch-Code:
       - Hello-World:
-          requires:
-            - Fetch-Code
+        filters:
+          branches:
+            ignore:
+              - develop
       # - Fetch-Code:
       #   - Hello-World
       # - Using-Node:
-          # requires:
-          #   - Fetch-Code
+      #     requires:
+      #       - Fetch-Code
       # - Now-Complete:
       #     requires:
       #       - Using-None
