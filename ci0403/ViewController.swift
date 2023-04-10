@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("裂开...")
+        print("裂开思密达")
         // Do any additional setup after loading the view.
     }
 

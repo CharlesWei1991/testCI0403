@@ -11,6 +11,7 @@ jobs:
       - run:
           name: Saying Hello
           command: |
+            bundle exec fastlane ios CI0403
             echo 'Hello World!'
             echo 'This is the delivery pipeline'
   # fetching code from the repo
