@@ -9,9 +9,7 @@ jobs:
           password: $Heri9Zailai
     steps:
       - checkout
-      - run:
-          name: Saying Hello
-          command: fastlane CI0403
+      - run: bundle install --path vendor/bundle
   # fetching code from the repo
   Fetch-Code:
     docker:
