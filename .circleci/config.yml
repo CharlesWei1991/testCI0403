@@ -11,7 +11,7 @@ jobs:
       - checkout
       - run:
           name: Saying Hello
-          command: bundle exec fastlane ios CI0403
+          command: fastlane CI0403
   # fetching code from the repo
   Fetch-Code:
     docker:
